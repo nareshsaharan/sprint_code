@@ -11,18 +11,42 @@ function CoursePopup(props) {
     
 const [backGroundState, setBackGroundState] = useState(["course-curriculum-popup-backgroud"])
 const[curriculumState, setcurriculumState] = useState(["course-curriculum-popup-cointainer"])
- 
 
 let WeekStructure  = null;
-if(props.courseType ==="CppFoundation"){
-    WeekStructure = CourseData.CppFoundation.week;
-}else if(props.courseType ==="JavaFoundation"){
-    WeekStructure = CourseData.JavaFoundation.week;
-}else if(props.courseType ==="PythonFoundation"){
-    WeekStructure = CourseData.PythonFoundation.week;
-}
-
- 
+    switch (props.courseType){
+        case ('CppFoundation'):
+            WeekStructure = CourseData.CppFoundation.week;
+            break;
+        case ('JavaFoundation'):
+            WeekStructure = CourseData.JavaFoundation.week;
+            break;
+        case('PythonFoundation'):
+            WeekStructure = CourseData.PythonFoundation.week;
+            break;
+        case('WebDevFoundation'):
+            WeekStructure = CourseData.WebDevFrontend.week;
+            break;
+        case ('PythonDataStructure'):
+            WeekStructure = CourseData.PythonDataStructure.week;
+            break;
+        case ('JavaDataStructure'):
+            WeekStructure = CourseData.JavaDataStructure.week;
+            break;
+        case('CppDataStructure'):
+            WeekStructure = CourseData.CppDataStructure.week;
+            break;
+        case('WebDevReact'):
+            WeekStructure = CourseData.WebDevFrontendReact.week;
+            break;
+        case ('MachineLearning'):
+            WeekStructure = CourseData.MachineLearning.week;
+            break;
+        case('DataScience'):
+            WeekStructure = CourseData.DataScience.week;
+            break;
+        default:
+            WeekStructure = null;
+    }
 
 let card=null;
  

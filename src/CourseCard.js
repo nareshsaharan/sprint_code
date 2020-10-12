@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import CoursePopup from './Components/CoursePopup/CoursePopup';
 import './CourseCard.css';
 
+
 function CourseCard(props) {
 
     const [state, setstate] = useState({showPopup:false});
@@ -20,36 +21,29 @@ function CourseCard(props) {
     
     return (
 
-        <div className="course-cointainer">
             
+            <div>
             
             {coursePopup}
 
-            <div style={{backgroundImage: `url(${props.backGroundImg})`}} className="course-cointainer-size course-cointainer-img">
-                <div className="course-difficulity-level">
-                    <span className="font-lg orange"> .</span>
-                    <span className={difficultyClass.join(' ')}> .</span>
-                    <span className="font-lg"> .</span>
-        
-                </div>
-                <div className="course-difficulity-name"> {props.difficulityType} </div>
+                <div className="single-course-card-cointainer">
+                
+                    <div style={{background:props.background,boxShadow:props.backgroundShadow}} className="inner-course-card-cointainer">
 
-                <h4 className="course-name">
-                    {props.courseName}
-                </h4>
+                        <h6 className="course-card-difficulity-name"> {props.difficulityType} </h6> 
+                        <h4 style={{padding:'10px 3px'}}> {props.courseName} </h4> 
 
-                <button className="course-explore-button" onClick={openCourseCurriculumPopup}>Explore</button>
-
-                <div className="course-inst-cointainer">
-
-                    <Avatar alt={props.courseName} src={props.courseImg} />
-
-                        <div className="course-inst-head">Instructor</div>
-                        <div className="course-inst-name">{props.InstName}</div>
+                    </div>
                         
+                    <div className="course-card-instructor-cointainer">
+                        <div  style={{background:props.background,boxShadow:props.backgroundShadow}} className="course-card-explore-btn" onClick={openCourseCurriculumPopup}> Explore </div>
+                        <Avatar alt={props.courseName} src={props.courseInstImg} />
+                        <h6> Instructor </h6>
+                        <h5 className="course-card-instructor-name">{props.InstName}</h5>
+                    </div>
                 </div>
+
             </div>
-        </div>
     )
 }
 

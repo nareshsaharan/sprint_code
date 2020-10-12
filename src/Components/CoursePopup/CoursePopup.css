@@ -21,7 +21,6 @@
     border-radius: 12px;
     padding: 3vh 4vw;
     z-index: 100;
-    /* box-shadow: 1px 1px 8px 1px #eaeac0; */
 }
 .week-cointainer{
     overflow-x: hidden;
@@ -29,9 +28,6 @@
     height: inherit;
 }
 
-/* .week-cointainer::-webkit-scrollbar{
-    display: none;
-} */
 
 ::-webkit-scrollbar-thumb {
     background-color: #999;
@@ -46,6 +42,7 @@
 @media (max-width: 500px)
 {
     .course-curriculum-popup-cointainer {
-        width: 85%;
+        width: 80%;
+        height: 80%;
     }
 }

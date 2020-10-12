@@ -21,7 +21,6 @@ const Register = () => {
 
     return (
         <div>
-            {/* <Button  className="registeration-button" onClick={()=>handleModal()} >Register</Button> */}
             <button className="registeration-button" onClick={()=>handleModal()} > Register </button>
 
             <Modal className='register-popup-back' show={state.show} >

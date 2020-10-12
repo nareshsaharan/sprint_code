@@ -7,7 +7,7 @@ import Navigation from './Components/Navigation/Navigation';
 import Courses from './Courses';
 import Introduction from './Introduction';
 import CourseBanner from './Assets/templatesample/courseBanner_3.jpg';
-import CoursePopup from './Components/CoursePopup/CoursePopup';
+
 
 const App = ()=> {
 
